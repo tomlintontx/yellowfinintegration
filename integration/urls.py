@@ -21,7 +21,3 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', lambda r: HttpResponseRedirect('admin/')),
 ]
-
-urlpatterns += [
-    path('accounts/', include('django.contrib.auth.urls')),
-]
