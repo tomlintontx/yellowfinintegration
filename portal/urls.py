@@ -4,5 +4,5 @@ from django.http import HttpResponseRedirect
 from . import views
 
 urlpatterns = [
-    path('page/', views.index, name='index'),
+    path('', views.index, name='index'),
 ]
