@@ -1,3 +1,11 @@
+body {
+  background-color: #efefef;
+}
+
+.card {
+  display:inline-block;
+}
+
 #topNavBar {
     z-index: 1000;
     background-color: #4c433a !important;
