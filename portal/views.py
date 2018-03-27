@@ -7,3 +7,7 @@ def index(request):
 	tom = 'This is my first bit of text'
 	context = {'tom': tom}
 	return render(request, 'portal/index.html', context)
+
+def home(request):
+	context = {}
+	return render(request, 'portal/home.html', context)
