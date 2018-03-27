@@ -18,7 +18,7 @@ body {
     opacity: 0.7;
 }
 
-form {
+#formBox {
 	position: fixed;
 	top: 50%;
     left: 50%;
