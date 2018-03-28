@@ -65,3 +65,7 @@ body {
 main>h1 {
   color: #4c433a;
 }
+
+#largeAreaChart {
+  margin-top: 15px;
+}
