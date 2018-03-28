@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="{% static 'portal/dashboard.css' %}"/>
 
-<nav class="navbar navbar-expand-lg navbar-dark" id="topNavBar">
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark" id="topNavBar">
   <a class="navbar-brand" href="#">
     <img src="{% static 'portal/images/truck_logo.svg' %}" width="30" height="30" alt="">
   </a>
@@ -106,9 +106,11 @@
 			</div>
 		</section>
 			<section class="row">
+				<div class="card-deck col-12">
 					<div class="card col-12" id="largeAreaChart">
 			        	  <script type="text/javascript" src="http://panama.yellowfin.bi:8075/JsAPI?reportUUID=900b456e-35dd-4a8d-aaf8-2103674a0d8f"></script>
 					</div>
+				</div>
 			</section>
 
         </main>
