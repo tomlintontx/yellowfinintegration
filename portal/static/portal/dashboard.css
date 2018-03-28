@@ -66,6 +66,10 @@ main>h1 {
   color: #4c433a;
 }
 
-#largeAreaChart {
-  margin-top: 15px;
+#dial1 {
+  min-height: 300px;
+}
+
+td {
+  display: none;
 }

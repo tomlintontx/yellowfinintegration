@@ -2,6 +2,7 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="{% static 'portal/dashboard.css' %}"/>
+<script src="http://panama.yellowfin.bi:8075/JsAPI" type="text/javascript"></script>
 
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark" id="topNavBar">
   <a class="navbar-brand" href="#">
@@ -93,22 +94,34 @@
           <h1>Dashboard</h1>
 
           <section class="row">
-          	<div class="card-deck col-12">
-	        	<div class="card col-4" id="dial1">
-	        	  	<script type="text/javascript" src="http://panama.yellowfin.bi:8075/JsAPI?reportUUID=4a19dba6-30f6-4832-a341-2ee730c6956f"></script>
-				</div>
-				<div class="card col-4" id="dial2">
-	        	  	<script type="text/javascript" src="http://panama.yellowfin.bi:8075/JsAPI?reportUUID=b84d6463-a1dc-471d-9df0-103815bab5e7"></script>
-				</div>
-				<div class="card col-4" id="dial3">
-	        	  	<script type="text/javascript" src="http://panama.yellowfin.bi:8075/JsAPI?reportUUID=a02e7b80-c28d-4897-92d6-9c1e8e032026"></script>
+          	<div class="card-deck col-12" style="min-height: 280px;">
+	        	<div class="card col-12" id="dial1">
+	        		<div class="col-12" id="chartDrawDivDials">
+		        	  	<script type="text/javascript">
+		        	  		var dialOptions = {};
+				        		dialOptions.reportUUID = 'f509590f-7457-494e-b698-d9f76e326a57';
+								dialOptions.elementId = 'chartDrawDivDials';
+								dialOptions.display = 'chart';
+								dialOptions.showTitle = 'false';
+								yellowfin.loadReport(dialOptions);
+		        	  	</script>
+		        	</div>
 				</div>
 			</div>
 		</section>
 			<section class="row">
-				<div class="card-deck col-12">
+				<h6 style="margin-top: 15px; margin-left: 15px"">Fleet Maintenance Over Time</h6>
+				<div class="card-deck col-12" style="min-height: 300px;">
 					<div class="card col-12" id="largeAreaChart">
-			        	  <script type="text/javascript" src="http://panama.yellowfin.bi:8075/JsAPI?reportUUID=900b456e-35dd-4a8d-aaf8-2103674a0d8f"></script>
+						<div class="col-12" id="chartDrawDivArea">
+			        		<script type="text/javascript">
+				        		var areaChartOptions = {};
+				        		areaChartOptions.reportUUID = '900b456e-35dd-4a8d-aaf8-2103674a0d8f';
+								areaChartOptions.elementId = 'chartDrawDivArea';
+								areaChartOptions.showTitle = 'false';
+								yellowfin.loadReport(areaChartOptions);
+			        		</script>
+			        	</div>
 					</div>
 				</div>
 			</section>
@@ -116,7 +129,6 @@
         </main>
       </div>
     </div>
-
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
