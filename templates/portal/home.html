@@ -87,35 +87,36 @@
             </li>
           </ul>
         </nav>
+    </div>
 
 
 
-<main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-          <h1>Dashboard</h1>
+	<main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+	          <h1>Dashboard</h1>
 
-          <section class="row">
-          	<div class="card-deck col-12" style="max-height: 290px;">
-	        	<div class="card col-12" id="dial1">
-	        		<div class="col-12" id="chartDrawDivDials" style="max-height: 290px;">
-		        	  	<script type="text/javascript">
-		        	  		var dialOptions = {};
-				        		dialOptions.reportUUID = 'f509590f-7457-494e-b698-d9f76e326a57';
-								dialOptions.elementId = 'chartDrawDivDials';
-								dialOptions.display = 'chart';
-								dialOptions.showTitle = 'false';
-								dialOptions.username = 'tom.linton@yellowfin.bi';
-								dialOptions.password = 'test';
-								yellowfin.loadReport(dialOptions);
-		        	  	</script>
-		        	</div>
+	          <section class="row">
+	          	<div class="card-deck col-12" style="min-height: 290px; max-height: 290px; max-width: 1570px;">
+		        	<div class="card col-12" id="dial1">
+		        		<div class="col-12" id="chartDrawDivDials" style=" min-height: 290px; max-height: 290px;">
+			        	  	<script type="text/javascript">
+			        	  		var dialOptions = {};
+					        		dialOptions.reportUUID = 'f509590f-7457-494e-b698-d9f76e326a57';
+									dialOptions.elementId = 'chartDrawDivDials';
+									dialOptions.display = 'chart';
+									dialOptions.showTitle = 'false';
+									dialOptions.username = 'tom.linton@yellowfin.bi';
+									dialOptions.password = 'test';
+									yellowfin.loadReport(dialOptions);
+			        	  	</script>
+			        	</div>
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 			<section class="row">
 				<h6 style="margin-top: 15px; margin-left: 15px"">Fleet Maintenance Over Time</h6>
-				<div class="card-deck col-12" style="max-height: 300px;">
+				<div class="card-deck col-12" style="max-height: 300px; max-width: 1570px;">
 					<div class="card col-12" id="largeAreaChart">
-						<div class="col-12" id="chartDrawDivArea" style="max-height: 300px;">
+						<div class="col-12" id="chartDrawDivArea" style="min-height: 300px; max-height: 300px;">
 			        		<script type="text/javascript">
 				        		var areaChartOptions = {};
 				        		areaChartOptions.reportUUID = '900b456e-35dd-4a8d-aaf8-2103674a0d8f';
@@ -130,9 +131,8 @@
 				</div>
 			</section>
 
-        </main>
-      </div>
-    </div>
+	</main>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
