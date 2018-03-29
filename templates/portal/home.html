@@ -94,39 +94,67 @@
 	<main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
 	          <h1>Dashboard</h1>
 
-	          <section class="row">
-	          	<div class="card-deck col-12" style="min-height: 290px; max-height: 290px; max-width: 1570px;">
-		        	<div class="card col-12" id="dial1">
-		        		<div class="col-12" id="chartDrawDivDials" style=" min-height: 290px; max-height: 290px;">
-			        	  	<script type="text/javascript">
-			        	  		var dialOptions = {};
-					        		dialOptions.reportUUID = 'f509590f-7457-494e-b698-d9f76e326a57';
-									dialOptions.elementId = 'chartDrawDivDials';
-									dialOptions.display = 'chart';
-									dialOptions.showTitle = 'false';
-									dialOptions.username = 'tom.linton@yellowfin.bi';
-									dialOptions.password = 'test';
-									yellowfin.loadReport(dialOptions);
-			        	  	</script>
-			        	</div>
+	          <section class="row" style="max-width: 1570px">
+	          	<div class="col-12">
+		        	<div class="card col-12" id="dial1" style="min-height: 220px; max-height: 220px;"">
+		        	  	<script type="text/javascript">
+		        	  		var dialOptions = {};
+				        		dialOptions.reportUUID = 'f509590f-7457-494e-b698-d9f76e326a57';
+								dialOptions.elementId = 'dial1';
+								dialOptions.display = 'chart';
+								dialOptions.showTitle = 'false';
+								dialOptions.username = 'tom.linton@yellowfin.bi';
+								dialOptions.password = 'test';
+								yellowfin.loadReport(dialOptions);
+		        	  	</script>
+			        </div>
+				</div>
+			</section>
+			<div class="row" style="margin-top: 15px; margin-left: 15px">
+				<h6 class="col-7">Table</h6>
+				<h6 class="col-5">Vehicles Retired vs Purchased</h6>
+			</div>
+			<section class="row" style="max-width: 1570px">
+				<div class="col-7">
+					<div class="card" id="tableChart" style="min-height: 270px; max-height: 270px;">
+		        		<script type="text/javascript">
+			        		var tableChartOptions = {};
+			        		tableChartOptions.reportUUID = 'd267b49e-bc4e-4731-97bb-fa96a6176326';
+							tableChartOptions.elementId = 'tableChart';
+							tableChartOptions.showTitle = 'false';
+							tableChartOptions.username = 'tom.linton@yellowfin.bi';
+							tableChartOptions.password = 'test';
+							yellowfin.loadReport(tableChartOptions);
+		        		</script>
+					</div>
+				</div>
+				<div class="col-5">
+					<div class="card" id="barChart" style="max-height: 270px; min-height: 270px;">
+		        		<script type="text/javascript">
+			        		var barChartOptions = {};
+			        		barChartOptions.reportUUID = '321d8484-f32d-432c-a8dd-a28b933b9252';
+							barChartOptions.elementId = 'barChart';
+							barChartOptions.showTitle = 'false';
+							barChartOptions.username = 'tom.linton@yellowfin.bi';
+							barChartOptions.password = 'test';
+							yellowfin.loadReport(barChartOptions);
+		        		</script>
 					</div>
 				</div>
 			</section>
 			<h6 class="row" style="margin-top: 15px; margin-left: 15px"">Fleet Maintenance Over Time</h6>
-			<section class="row">
-				<div class="card-deck col-12" style="max-height: 300px; max-width: 1570px;">
-					<div class="card col-12" id="largeAreaChart">
-						<div class="col-12" id="chartDrawDivArea" style="min-height: 300px; max-height: 300px;">
-			        		<script type="text/javascript">
-				        		var areaChartOptions = {};
-				        		areaChartOptions.reportUUID = '900b456e-35dd-4a8d-aaf8-2103674a0d8f';
-								areaChartOptions.elementId = 'chartDrawDivArea';
-								areaChartOptions.showTitle = 'false';
-								areaChartOptions.username = 'tom.linton@yellowfin.bi';
-								areaChartOptions.password = 'test';
-								yellowfin.loadReport(areaChartOptions);
-			        		</script>
-			        	</div>
+			<section class="row" style="max-width: 1570px">
+				<div class="col-12">
+					<div class="card" id="largeAreaChart" style="max-height: 300px; min-height: 300px;"">
+		        		<script type="text/javascript">
+			        		var areaChartOptions = {};
+			        		areaChartOptions.reportUUID = '900b456e-35dd-4a8d-aaf8-2103674a0d8f';
+							areaChartOptions.elementId = 'largeAreaChart';
+							areaChartOptions.showTitle = 'false';
+							areaChartOptions.username = 'tom.linton@yellowfin.bi';
+							areaChartOptions.password = 'test';
+							yellowfin.loadReport(areaChartOptions);
+		        		</script>
 					</div>
 				</div>
 			</section>
