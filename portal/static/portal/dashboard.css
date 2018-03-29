@@ -2,10 +2,6 @@ body {
   background-color: #efefef;
 }
 
-.card {
-  display:inline-block;
-}
-
 #topNavBar {
     z-index: 1000;
     background-color: #4c433a !important;
@@ -66,10 +62,18 @@ main>h1 {
   color: #4c433a;
 }
 
-#dial1 {
-  min-height: 300px;
+#dial1 > div > div.yfReportFooter {
+  display: none;
 }
 
-td {
+#tableChart > div > div.yfReportFooter {
+  display: none;
+}
+
+#barChart > div > div.yfReportFooter {
+  display: none;
+}
+
+#largeAreaChart > div > div.yfReportFooter {
   display: none;
 }
