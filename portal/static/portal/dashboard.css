@@ -66,7 +66,7 @@ main>h1 {
   display: none;
 }
 
-#tableChart > div > div.yfReportFooter {
+#tableChartDiv > div > div.yfReportFooter {
   display: none;
 }
 
@@ -77,3 +77,16 @@ main>h1 {
 #largeAreaChart > div > div.yfReportFooter {
   display: none;
 }
+
+#dialNo1 > div > div.yfReportFooter {
+  display: none;
+}
+
+#dialNo2 > div > div.yfReportFooter {
+  display: none;
+}
+
+#dialNo3 > div > div.yfReportFooter {
+  display: none;
+}
+
