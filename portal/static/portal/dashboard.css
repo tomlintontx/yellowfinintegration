@@ -90,3 +90,6 @@ main>h1 {
   display: none;
 }
 
+#dropdownMenuButton {
+  background-color: #4c433a;
+}
