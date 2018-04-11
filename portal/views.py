@@ -10,10 +10,15 @@ def index(request):
 	return render(request, 'portal/index.html', context)
 
 def home(request):
-	context = {}
+	url = loginUser.WebServices.login_user('tom.linton@yellowfin.bi', 'test')
+	context = { 'url': url }
 	return render(request, 'portal/home.html', context)
 
 def iframe(request):
-	url = loginUser.WebServices.login_user()
-	context = { 'url': url }
+	url = loginUser.WebServices.login_user('tom.linton@yellowfin.bi', 'test')
+	iframe = loginUser.WebServices.login_user('tom.linton@yellowfin.bi', 'test')
+	context = { 
+		'url': url,
+		'iframe': iframe
+	}
 	return render(request, 'portal/iframe.html', context)

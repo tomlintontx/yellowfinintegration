@@ -2,7 +2,7 @@ from suds.client import Client
 
 class WebServices():
 
-	def login_user():
+	def login_user(username, password):
 		url = 'http://panama.yellowfin.bi:8075/services/AdministrationService?wsdl'
 		client = Client(url)
 
@@ -11,18 +11,39 @@ class WebServices():
 			'loginId': 'tom.linton@yellowfin.bi',
 			'password': 'test',
 			'orgId': 1,
+			'function': 'LOGOUTBYUSERID'
+		}
+
+		asr1 = {		
+
+			'loginId': 'tom.linton@yellowfin.bi',
+			'password': 'test',
+			'orgId': 1,
 			'function': 'LOGINUSER'
 		}
 
 		ap = {
-			'userId': 'tom.linton@yellowfin.bi',
-			'password': 'test'
+			'userId': username
+		}
+
+		ap1 = {
+			'userId': username,
+			'password': password
 		}
 
 		asr['person'] = ap
 
-		result = client.service.remoteAdministrationCall(asr)
+		asr1['person'] = ap1
 
-		newURL = 'http://panama.yellowfin.bi:8075/logon.i4?LoginWebserviceId=' + result['loginSessionId']
+		result = client.service.remoteAdministrationCall(asr1)
+		result1 = client.service.remoteAdministrationCall(asr1)
 
-		return newURL
+		ssoURL = 'http://panama.yellowfin.bi:8075/logon.i4?LoginWebserviceId=' + result1['loginSessionId']
+		iframeURL = 'http://panama.yellowfin.bi:8075/logon.i4?LoginWebserviceId=' + result1['loginSessionId'] + '&disableheader=true'
+
+		urls = {
+			'ssoURL': ssoURL,
+			'iframeURL': iframeURL
+		}
+
+		return urls
