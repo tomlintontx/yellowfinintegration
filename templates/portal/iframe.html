@@ -49,6 +49,9 @@
               <a class="nav-link active" id="sideLinks" href="../iframe">Analytics</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" id="sideLinks" href="{{ url.iframeURL }}">Advanced Analytics</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" id="sideLinks" href="/admin">Analytics Admin</a>
             </li>
           </ul>
@@ -60,7 +63,7 @@
 
 	<main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
     <section class="row">
-       <iframe class="col-12" src="{{ url }}" style="min-height: 850px; border: none;"></iframe> 
+       <iframe class="col-12" src="{{ iframe.iframeURL }}" style="min-height: 850px; border: none;"></iframe> 
 		</section>
 	</main>
 </div>

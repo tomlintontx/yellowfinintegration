@@ -24,7 +24,7 @@
           Help
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="https://university.yellowfinbi.com/" target="_blank">Universtiy</a>
+          <a class="dropdown-item" href="https://university.yellowfinbi.com/" target="_blank">University</a>
           <a class="dropdown-item" href="http://wiki.yellowfin.com.au/display/USER74/Home" target="_blank">Wiki</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="https://community.yellowfinbi.com/" target="_blank" >Community</a>
@@ -50,6 +50,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" id="sideLinks" href="../iframe">Analytics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="sideLinks" href="{{ url.ssoURL }}">Advanced Analytics</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="sideLinks" href="/admin">Analytics Admin</a>
@@ -91,9 +94,10 @@
 
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Region
+        -- Region --
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#" onclick="filterValues(this)">All Regions</a>
         <a class="dropdown-item" href="#" onclick="filterValues(this)">Asia</a>
         <a class="dropdown-item" href="#" onclick="filterValues(this)">Australia</a>
         <a class="dropdown-item" href="#" onclick="filterValues(this)">Europe</a>
