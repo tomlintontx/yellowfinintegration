@@ -70,7 +70,11 @@ main>h1 {
   display: none;
 }
 
-#barChart > div > div.yfReportFooter {
+#tableChartDiv1 > div > div.yfReportFooter {
+  display: none;
+}
+
+#barChartDiv > div > div.yfReportFooter {
   display: none;
 }
 
