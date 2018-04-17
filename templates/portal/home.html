@@ -141,32 +141,48 @@
           </div>
         </div>
       </section>
-			<div class="row" style="max-width: 1570px; margin-top: 15px; margin-left: 15px">
+			<div class="row" style="max-width: 1570px; margin-top: 15px; margin-left: 15px; max-height: 400px;">
 				<h6 class="col-7">Shipment Counts</h6>
 				<h6 class="col-5">Vehicles Retired vs Purchased</h6>
 			</div>
-			<section class="row" style="max-width: 1570px">
+			<section class="row" style="max-width: 1570px; margin-left: 0px">
 				<div class="col-7">
-					<div class="card" id="tableChart" style="min-height: 270px; max-height: 270px;">
-            <div id="tableChartDiv">
-		        		<script type="text/javascript">
-			        		table();
-		        		</script>
+          <div class="row">
+  					<div class="card col-12" id="tableChart" style="min-height: 270px; max-height: 400px;">
+              <div id="tableChartDiv">
+  		        		<script type="text/javascript">
+  			        		table();
+  		        		</script>
+              </div>
+  					</div>
+          </div>
+          <div class="row" style="margin-top: 15px; margin-left: 0px;">
+            <h6 class="col-12">Shipments vs. Sales</h6>
+          </div>
+           <div class="row">
+            <div class="card col-12" id="tableChart1" style="min-height: 270px; max-height: 400px;">
+              <div id="tableChartDiv1" style="height: 285px;">
+                  <script type="text/javascript">
+                    table1();
+                  </script>
+              </div>
             </div>
-					</div>
+          </div>
 				</div>
 				<div class="col-5">
-					<div class="card" id="barChart" style="max-height: 270px; min-height: 270px;">
+					<div class="card" id="barChart" style="min-height: 270px; max-height: 800px;">
+            <div id="barChartDiv">
 		        		<script type="text/javascript">
                   barChart();
 		        		</script>
+            </div>
 					</div>
 				</div>
 			</section>
 			<h6 class="row" style="margin-top: 15px; margin-left: 15px"">Fleet Maintenance Over Time</h6>
 			<section class="row" style="max-width: 1570px">
 				<div class="col-12">
-					<div class="card" id="largeAreaChart" style="max-height: 400px; min-height: 300px;"">
+					<div class="card" id="largeAreaChart" style="max-height: 400px; min-height: 300px; margin-bottom: 15px">
 		        		<script type="text/javascript">
                   areaChart();
 		        		</script>

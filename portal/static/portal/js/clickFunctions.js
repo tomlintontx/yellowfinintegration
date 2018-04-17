@@ -16,6 +16,7 @@ filterValues = function(fvalue) {
    	yellowfin.reports.loadReportFilters('d267b49e-bc4e-4731-97bb-fa96a6176326', filterCallback);
    	yellowfin.reports.loadReportFilters('321d8484-f32d-432c-a8dd-a28b933b9252', filterCallback);
    	yellowfin.reports.loadReportFilters('900b456e-35dd-4a8d-aaf8-2103674a0d8f', filterCallback);
+   	yellowfin.reports.loadReportFilters('80debeee-2628-4874-bb51-f069392c4cdc', filterCallback);
 
    	console.log(filterValues);
 
@@ -24,6 +25,7 @@ filterValues = function(fvalue) {
 	secondDial(filterValues);
 	thirdDial(filterValues);
 	table(filterValues);
+	table1(filterValues);
 	barChart(filterValues);
 }
 
@@ -89,12 +91,27 @@ table = function(filterVals) {
 	yellowfin.loadReport(tableChartOptions);
 }
 
+table1 = function(filterVals) {
+	var tableChartOptions1 = {};
+	tableChartOptions1.reportUUID = '80debeee-2628-4874-bb51-f069392c4cdc';
+	tableChartOptions1.elementId = 'tableChartDiv1';
+	tableChartOptions1.showTitle = 'false';
+	tableChartOptions1.username = 'tom.linton@yellowfin.bi';
+	tableChartOptions1.password = 'test';
+	tableChartOptions1.showFilters = 'false';
+	tableChartOptions1.filters = {};
+	if (filterVals != null) {
+		tableChartOptions1.filters = filterVals;
+	}
+	yellowfin.loadReport(tableChartOptions1);
+}
+
 barChart = function(filterVals) {
 	var barChartOptions = {};
 	barChartOptions.reportUUID = '321d8484-f32d-432c-a8dd-a28b933b9252';
-	barChartOptions.elementId = 'barChart';
+	barChartOptions.elementId = 'barChartDiv';
 	barChartOptions.showTitle = 'false';
-	barChartOptions.username = 'tom.linton@yellowfin.bi';
+	barChartOptions.username = '{{ username }}';
 	barChartOptions.password = 'test';
 	barChartOptions.showFilters = 'false';
 	barChartOptions.filters = {};
