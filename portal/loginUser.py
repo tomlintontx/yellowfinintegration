@@ -40,10 +40,12 @@ class WebServices():
 
 		ssoURL = 'http://panama.yellowfin.bi:8075/logon.i4?LoginWebserviceId=' + result1['loginSessionId']
 		iframeURL = 'http://panama.yellowfin.bi:8075/logon.i4?LoginWebserviceId=' + result1['loginSessionId'] + '&disableheader=true'
+		reportsIframe = 'http://panama.yellowfin.bi:8075/logon.i4?LoginWebserviceId=' + result1['loginSessionId'] + '&entry=BROWSE' + '&disableheader=true' + '&yftoolbar=false' + '&disablelogoff=true'
 
 		urls = {
 			'ssoURL': ssoURL,
-			'iframeURL': iframeURL
+			'iframeURL': iframeURL,
+			'reportsIframe': reportsIframe
 		}
 
 		return urls

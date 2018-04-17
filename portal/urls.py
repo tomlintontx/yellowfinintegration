@@ -6,5 +6,6 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('home/', views.home, name='home'),
-    path('iframe/', views.iframe, name='iframe')
+    path('iframe/', views.iframe, name='iframe'),
+    path('reports/', views.reports, name='reports')
 ]
