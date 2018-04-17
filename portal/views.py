@@ -22,3 +22,14 @@ def iframe(request):
 		'iframe': iframe
 	}
 	return render(request, 'portal/iframe.html', context)
+
+def reports(request):
+	url = loginUser.WebServices.login_user('tom.linton@yellowfin.bi', 'test')
+	iframe = loginUser.WebServices.login_user('tom.linton@yellowfin.bi', 'test')
+	browse = loginUser.WebServices.login_user('tom.linton@yellowfin.bi', 'test')
+	context = { 
+		'url': url,
+		'iframe': iframe,
+		'browse': browse
+	}
+	return render(request, 'portal/reports.html', context)
