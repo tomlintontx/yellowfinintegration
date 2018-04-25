@@ -6,13 +6,13 @@ class WebServices():
 		url = 'http://panama.yellowfin.bi:8075/services/AdministrationService?wsdl'
 		client = Client(url)
 
-		asr = {		
+		# asr = {		
 
-			'loginId': 'tom.linton@yellowfin.bi',
-			'password': 'test',
-			'orgId': 1,
-			'function': 'LOGOUTBYUSERID'
-		}
+		# 	'loginId': 'tom.linton@yellowfin.bi',
+		# 	'password': 'test',
+		# 	'orgId': 1,
+		# 	'function': 'LOGOUTBYUSERID'
+		# }
 
 		asr1 = {		
 
@@ -22,30 +22,32 @@ class WebServices():
 			'function': 'LOGINUSER'
 		}
 
-		ap = {
-			'userId': username
-		}
+		# ap = {
+		# 	'userId': username
+		# }
 
 		ap1 = {
 			'userId': username,
 			'password': password
 		}
 
-		asr['person'] = ap
+		#asr['person'] = ap
 
 		asr1['person'] = ap1
 
-		result = client.service.remoteAdministrationCall(asr1)
+		#result = client.service.remoteAdministrationCall(asr1)
 		result1 = client.service.remoteAdministrationCall(asr1)
 
 		ssoURL = 'http://panama.yellowfin.bi:8075/logon.i4?LoginWebserviceId=' + result1['loginSessionId']
 		iframeURL = 'http://panama.yellowfin.bi:8075/logon.i4?LoginWebserviceId=' + result1['loginSessionId'] + '&disableheader=true'
 		reportsIframe = 'http://panama.yellowfin.bi:8075/logon.i4?LoginWebserviceId=' + result1['loginSessionId'] + '&entry=BROWSE' + '&disableheader=true' + '&yftoolbar=false' + '&disablelogoff=true'
+		admin = 'http://panama.yellowfin.bi:8075/logon.i4?LoginWebserviceId=' + result1['loginSessionId'] + '&entry=ADMINISTRATION' + '&disableheader=true' + '&yftoolbar=false' + '&disablelogoff=true'
 
 		urls = {
 			'ssoURL': ssoURL,
 			'iframeURL': iframeURL,
-			'reportsIframe': reportsIframe
+			'reportsIframe': reportsIframe,
+			'administration': admin
 		}
 
 		return urls

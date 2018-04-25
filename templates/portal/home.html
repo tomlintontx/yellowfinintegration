@@ -55,7 +55,7 @@
               <a class="nav-link" id="sideLinks" href="{{ url.ssoURL }}">Advanced Analytics</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="sideLinks" href="/admin">Analytics Admin</a>
+              <a class="nav-link" id="sideLinks" href="../administration">Analytics Admin</a>
             </li>
           </ul>
 
@@ -97,17 +97,17 @@
         -- Region --
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#" onclick="filterValues(this)">All Regions</a>
-        <a class="dropdown-item" href="#" onclick="filterValues(this)">Asia</a>
-        <a class="dropdown-item" href="#" onclick="filterValues(this)">Australia</a>
-        <a class="dropdown-item" href="#" onclick="filterValues(this)">Europe</a>
-        <a class="dropdown-item" href="#" onclick="filterValues(this)">Latin America</a>
-        <a class="dropdown-item" href="#" onclick="filterValues(this)">North America</a>
-        <a class="dropdown-item" href="#" onclick="filterValues(this)">Sub Saharan Africa</a>     
+        <a class="dropdown-item" href="#" onclick="prepContainers(); filterValues(this);">All Regions</a>
+        <a class="dropdown-item" href="#" onclick="prepContainers(); filterValues(this);">Asia</a>
+        <a class="dropdown-item" href="#" onclick="prepContainers(); filterValues(this);">Australia</a>
+        <a class="dropdown-item" href="#" onclick="prepContainers(); filterValues(this);">Europe</a>
+        <a class="dropdown-item" href="#" onclick="prepContainers(); filterValues(this);">Latin America</a>
+        <a class="dropdown-item" href="#" onclick="prepContainers(); filterValues(this);">North America</a>
+        <a class="dropdown-item" href="#" onclick="prepContainers(); filterValues(this);">Sub Saharan Africa</a>     
       </div>
     </div>
 
-      <div class="row" style="max-width: 1570px; margin-top: 15px; margin-left: 15px">
+      <div class="row" style="max-width: 1570px; margin-top: 15px; margin-left: 5px">
         <h6 class="col-4">Deployed Vehicles</h6>
         <h6 class="col-4">Vehicles Requiring Service</h6>
         <h6 class="col-4">Vehicle Under Repair</h6>
@@ -141,7 +141,7 @@
           </div>
         </div>
       </section>
-			<div class="row" style="max-width: 1570px; margin-top: 15px; margin-left: 15px; max-height: 400px;">
+			<div class="row" style="max-width: 1570px; margin-top: 15px; margin-left: 5px; max-height: 400px;">
 				<h6 class="col-7">Shipment Counts</h6>
 				<h6 class="col-5">Vehicles Retired vs Purchased</h6>
 			</div>
@@ -156,7 +156,7 @@
               </div>
   					</div>
           </div>
-          <div class="row" style="margin-top: 15px; margin-left: 0px;">
+          <div class="row" style="margin-top: 15px;">
             <h6 class="col-12">Shipments vs. Sales</h6>
           </div>
            <div class="row">
@@ -179,7 +179,7 @@
 					</div>
 				</div>
 			</section>
-			<h6 class="row" style="margin-top: 15px; margin-left: 15px"">Fleet Maintenance Over Time</h6>
+			<h6 class="row" style="margin-top: 15px; margin-left: 15px">Fleet Maintenance Over Time</h6>
 			<section class="row" style="max-width: 1570px">
 				<div class="col-12">
 					<div class="card" id="largeAreaChart" style="max-height: 700px; min-height: 550px; margin-bottom: 15px">
