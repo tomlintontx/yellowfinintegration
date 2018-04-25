@@ -1,3 +1,4 @@
+
 filterValues = function(fvalue) {
 
 	document.getElementById('dropdownMenuButton').innerHTML = fvalue.innerHTML;
@@ -17,8 +18,6 @@ filterValues = function(fvalue) {
    	yellowfin.reports.loadReportFilters('321d8484-f32d-432c-a8dd-a28b933b9252', filterCallback);
    	yellowfin.reports.loadReportFilters('900b456e-35dd-4a8d-aaf8-2103674a0d8f', filterCallback);
    	yellowfin.reports.loadReportFilters('80debeee-2628-4874-bb51-f069392c4cdc', filterCallback);
-
-   	console.log(filterValues);
 
    	firstDial(filterValues);
 	areaChart(filterValues);
@@ -42,7 +41,6 @@ firstDial = function(filterVals) {
 		dial1Options.filters = filterVals;
 	}
 	yellowfin.loadReport(dial1Options);
-	console.log(dial1Options);
 }
 
 secondDial = function(filterVals) {
@@ -134,4 +132,17 @@ areaChart = function(filterVals) {
 		areaChartOptions.filters = filterVals;
 	}
 	yellowfin.loadReport(areaChartOptions);
+}
+
+prepContainers = function() {
+	targetContainers = ['dialNo1','dialNo2','dialNo3','tableChartDiv','tableChartDiv1','barChartDiv','largeAreaChartDiv'];
+
+		for (i=0;i<targetContainers.length;i++) {
+			var targetNode = document.getElementById(targetContainers[i]);
+			if (targetNode.hasChildNodes()) {
+				while (targetNode.firstChild) {
+				    targetNode.removeChild(targetNode.firstChild);
+				}
+			}
+		}
 }
