@@ -78,7 +78,7 @@ table = function(filterVals) {
 	var tableChartOptions = {};
 	tableChartOptions.reportUUID = 'd267b49e-bc4e-4731-97bb-fa96a6176326';
 	tableChartOptions.elementId = 'tableChartDiv';
-	tableChartOptions.showTitle = 'false';
+	//tableChartOptions.showTitle = 'false';
 	tableChartOptions.username = 'tom.linton@yellowfin.bi';
 	tableChartOptions.password = 'test';
 	tableChartOptions.showFilters = 'false';
@@ -145,4 +145,12 @@ prepContainers = function() {
 				}
 			}
 		}
+}
+
+showIcons = function() {
+	document.getElementsByClassName('yfReportTitleInner')[0].style.display = 'block';
+}
+
+hideIcons = function() {
+	document.getElementsByClassName('yfReportTitleInner')[0].style.display = 'none';
 }
