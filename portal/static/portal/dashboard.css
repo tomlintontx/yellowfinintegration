@@ -97,3 +97,24 @@ main>h1 {
 #dropdownMenuButton {
   background-color: #4c433a;
 }
+
+div.yfReportTitle {
+  display: none;
+}
+
+div.yfReportTitleInner {
+  display: none;
+}
+
+
+.yfReportTitleOuter > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) {
+  display: none;
+}
+
+.yfReportTitleOuter > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(3) {
+  display: none;
+}
+
+.yfReportTitleOuter > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) {
+  background: 0 !important;
+}
