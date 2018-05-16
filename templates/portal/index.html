@@ -1,20 +1,34 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'portal/main.css' %}"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link rel="shortcut icon" href="{% static 'portal/favicon/favicon.ico' %}"/>
 
 <body id="signInBackground">
-	<div id="signInBox">
-		<div id="formBox">
-			<img src="{% static 'portal/images/companylogo.jpg' %}"/>
+	<div class="row align-items-center justify-content-center" id="signInBox" style="height: 100%;">
+		<div class="col-12" id="formBox">
+			<img class="col-12" style="text-align: center;" src="{% static 'portal/images/companylogo.jpg' %}"/>
 			<form role="form" action="" method="post">
 				{% csrf_token %}
 				{% include 'portal/form_template.html' %}
 				<div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                    	<button type="submit" class="btn btn-success">Submit</button>
+                    <div class="col-12" style="text-align: center;">
+                    	<button type="submit" class="btn btn-warning" style="margin-top: 10px;">Submit</button>
                     </div>
 				</div>
 			</form>
 		</div>
 	</div>
 </body>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	var inputs = document.getElementsByTagName('input');
+	debugger;
+	for (i=1;i<inputs.length;i++) {
+		inputs[i].className = "col-12 form-control";
+	}
+</script>
