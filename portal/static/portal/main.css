@@ -5,50 +5,16 @@ body {
   overflow: hidden;
 }
 
-#signInBox {
-	width: 300px;
-	height: 440px;
-	position: fixed;
-	border: 5px solid #d3d3d3;
-	top: 50%;
-    left: 50%;
-    margin-top: -250px;
-    margin-left: -150px;
-    background-color: white;
-    opacity: 0.7;
-}
-
 #formBox {
-	position: fixed;
-	top: 50%;
-    left: 50%;
-    margin-top: -200px;
-    margin-left: -90px;
-}
-
-input {
-	width: 200px;
-	height: 30px;
-	border-radius: 5px;
-	border: solid 1px #d3d3d3;
+	border: 2px solid #d3d3d3;
+	border-radius: 5px 5px 5px 5px;
+	background-color: rgba(255,255,255,0.7);
+    
+    max-width:300px;
 }
 
 img {
 	height:auto;
 	width:200px;
-
-}
-
-#signInButton {
-	width:150px;
-	margin-top: 30px;
-	margin-left: 25px;
-	border-radius: 8px;
-	background-color: #d3d3d3;
-	height: 25px;
-	font-weight: bold;
-}
-
-h4 {
-	font-family: 'Trebuchet MS';
+	margin-top: 25px;
 }
