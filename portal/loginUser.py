@@ -2,17 +2,9 @@ from suds.client import Client
 
 class WebServices():
 
-	def login_user(username, password):
+	def login_user(username):
 		url = 'http://panama.yellowfin.bi:8075/services/AdministrationService?wsdl'
 		client = Client(url)
-
-		# asr = {		
-
-		# 	'loginId': 'tom.linton@yellowfin.bi',
-		# 	'password': 'test',
-		# 	'orgId': 1,
-		# 	'function': 'LOGOUTBYUSERID'
-		# }
 
 		asr1 = {		
 
@@ -22,20 +14,13 @@ class WebServices():
 			'function': 'LOGINUSER'
 		}
 
-		# ap = {
-		# 	'userId': username
-		# }
-
 		ap1 = {
 			'userId': username,
-			'password': password
+			'password': 'test'
 		}
-
-		#asr['person'] = ap
 
 		asr1['person'] = ap1
 
-		#result = client.service.remoteAdministrationCall(asr1)
 		result1 = client.service.remoteAdministrationCall(asr1)
 
 		ssoURL = 'http://panama.yellowfin.bi:8075/logon.i4?LoginWebserviceId=' + result1['loginSessionId']

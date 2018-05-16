@@ -5,16 +5,16 @@ from django.views.generic import View
 from django.template import loader
 from . import loginUser
 from .forms import UserForm
+import django.contrib.sessions
 
 # Create your views here.
 def index(request):
-	tom = 'This is my first bit of text'
-	context = {'tom': tom}
 	return render(request, 'portal/index.html', context)
 
 def home(request):
-	url = loginUser.WebServices.login_user('tom.linton@yellowfin.bi', 'test')
-	admin = loginUser.WebServices.login_user('tom.linton@yellowfin.bi', 'test')
+	username = request.session.get('username')
+	url = loginUser.WebServices.login_user(username)
+	admin = loginUser.WebServices.login_user(username)
 	context = { 
 		'url': url,
 		'admin': admin
@@ -22,9 +22,10 @@ def home(request):
 	return render(request, 'portal/home.html', context)
 
 def iframe(request):
-	url = loginUser.WebServices.login_user('tom.linton@yellowfin.bi', 'test')
-	iframe = loginUser.WebServices.login_user('tom.linton@yellowfin.bi', 'test')
-	admin = loginUser.WebServices.login_user('tom.linton@yellowfin.bi', 'test')
+	username = request.session.get('username')
+	url = loginUser.WebServices.login_user(username)
+	iframe = loginUser.WebServices.login_user(username)
+	admin = loginUser.WebServices.login_user(username)
 	context = { 
 		'url': url,
 		'iframe': iframe
@@ -32,9 +33,10 @@ def iframe(request):
 	return render(request, 'portal/iframe.html', context)
 
 def reports(request):
-	url = loginUser.WebServices.login_user('tom.linton@yellowfin.bi', 'test')
-	browse = loginUser.WebServices.login_user('tom.linton@yellowfin.bi', 'test')
-	admin = loginUser.WebServices.login_user('tom.linton@yellowfin.bi', 'test')
+	username = request.session.get('username')
+	url = loginUser.WebServices.login_user(username)
+	browse = loginUser.WebServices.login_user(username)
+	admin = loginUser.WebServices.login_user(username)
 	context = { 
 		'url': url,
 		'iframe': iframe,
@@ -44,9 +46,10 @@ def reports(request):
 	return render(request, 'portal/reports.html', context)
 
 def yellowfinAdmin(request):
-	url = loginUser.WebServices.login_user('tom.linton@yellowfin.bi', 'test')
-	browse = loginUser.WebServices.login_user('tom.linton@yellowfin.bi', 'test')
-	admin = loginUser.WebServices.login_user('tom.linton@yellowfin.bi', 'test')
+	username = request.session.get('username')
+	url = loginUser.WebServices.login_user(username)
+	browse = loginUser.WebServices.login_user(username)
+	admin = loginUser.WebServices.login_user(username)
 	context = { 
 		'url': url,
 		'iframe': iframe,
@@ -57,7 +60,7 @@ def yellowfinAdmin(request):
 
 class UserFormView(View):
 	form_class = UserForm
-	template_name = 'portal/registration_form.html'
+	template_name = 'portal/index.html'
 
 	# display a blank form
 	def get(self, request):
@@ -67,25 +70,16 @@ class UserFormView(View):
 	# process form data
 	def post(self, request):
 		form = self.form_class(request.POST)
+		username = request.POST['username']
+		password = request.POST['password']
+		request.session['username'] = username
 
-		if form.is_valid():
+		user = authenticate(username=username, password=password)
 
-			user = form.save(commit=False)
+		if user is not None:
 
-			# cleaned normalized data
-			username = form.cleaned_data['username']
-			password = form.cleaned_data['password']
-			user.set_password(password)
-			user.save()
-
-
-			#returns User objects if credentials are correct
-			user = authenticate(username=username, password=password)
-
-			if user is not None:
-
-				if user.is_active:
-					login(request, user)
-					return redirect('portal:home')
+			if user.is_active:
+				login(request, user)
+				return redirect('/portal/home')
 
 		return render(request, self.template_name, {'form': form})

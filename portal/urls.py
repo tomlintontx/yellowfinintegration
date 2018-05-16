@@ -4,8 +4,8 @@ from django.http import HttpResponseRedirect
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('register/', views.UserFormView.as_view(), name='register'),
+    path('', views.UserFormView.as_view(), name='index'),
+    # path('register/', views.UserFormView.as_view(), name='register'),
     path('home/', views.home, name='home'),
     path('iframe/', views.iframe, name='iframe'),
     path('reports/', views.reports, name='reports'),
