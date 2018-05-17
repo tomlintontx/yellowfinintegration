@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
 from django.views.generic import View
 from django.template import loader
@@ -9,7 +9,11 @@ import django.contrib.sessions
 
 # Create your views here.
 def index(request):
-	return render(request, 'portal/index.html', context)
+	return render(request, 'portal/index.html')
+
+def logout_user(request):
+	logout(request)
+	return render(request, 'portal/logout.html')
 
 def home(request):
 	username = request.session.get('username')
@@ -69,6 +73,7 @@ class UserFormView(View):
 
 	# process form data
 	def post(self, request):
+		request.session.flush()
 		form = self.form_class(request.POST)
 		username = request.POST['username']
 		password = request.POST['password']
