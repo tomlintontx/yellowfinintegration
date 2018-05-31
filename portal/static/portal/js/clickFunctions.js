@@ -36,7 +36,6 @@ firstDial = function(filterVals) {
 	dial1Options.showTitle = 'false';
 	dial1Options.username = username;
 	dial1Options.password = 'test';
-	dial1Options.orgRef = 'Australia';
 	dial1Options.showFilters = 'false';
 	if (filterVals != null) {
 		dial1Options.filters = filterVals;
