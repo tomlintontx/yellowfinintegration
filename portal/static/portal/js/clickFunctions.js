@@ -29,6 +29,7 @@ filterValues = function(fvalue) {
 }
 
 
+
 firstDial = function(filterVals) {
 	var dial1Options = {};
 	dial1Options.reportUUID = '4a19dba6-30f6-4832-a341-2ee730c6956f';

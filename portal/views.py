@@ -15,6 +15,7 @@ def logout_user(request):
 	logout(request)
 	return render(request, 'portal/logout.html')
 
+
 def home(request):
 	username = request.session.get('username')
 	url = loginUser.WebServices.login_user(username)
