@@ -21,7 +21,8 @@ def home(request):
 	admin = loginUser.WebServices.login_user(username)
 	context = { 
 		'url': url,
-		'admin': admin
+		'admin': admin,
+		'username': username
 	}
 	return render(request, 'portal/home.html', context)
 
