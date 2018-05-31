@@ -6,12 +6,28 @@ class WebServices():
 		url = 'http://panama.yellowfin.bi:8075/services/AdministrationService?wsdl'
 		client = Client(url)
 
+		orgRef = {
+			'tom.linton@yellowfin.bi': 'North America',
+			'matt.wilson@yellowfin.bi': 'North America',
+			'conner.madigan@yellowfin.bi': 'North America',
+			'tyler.mcgraw@yellowfin.bi': 'North America',
+			'yulia.astrelina@yellowfin.bi': 'Australia',
+			'tim.mcintosh@yellowfin.bi': 'Australia',
+			'chithresh.suresh@yellowfin.bi': 'Australia',
+			'rob.aldridge@yellowfin.bi': 'Australia',
+			'emma.urli@yellowfin.bi': 'Australia',
+			'sam.vadodaria@yellowfin.bi': 'Europe',
+			'brett.churchill@yellowfin.bi': 'Europe'
+		}
+
+
 		asr1 = {		
 
 			'loginId': 'tom.linton@yellowfin.bi',
 			'password': 'test',
 			'orgId': 1,
-			'function': 'LOGINUSER'
+			'function': 'LOGINUSER',
+			'orgRef': orgRef[username]
 		}
 
 		ap1 = {
