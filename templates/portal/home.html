@@ -119,7 +119,8 @@
           <div class="card" id="dialNo1Container" style="min-height: 200px; max-height: 200px;">
             <div id="dialNo1" style="max-height: 200px; min-height: 200px;">
               <script type="text/javascript">
-                  firstDial();
+                var username = '{{username}}';
+                firstDial();
               </script>
             </div>
           </div>
@@ -128,7 +129,8 @@
           <div class="card" id="dialNo2Container" style="max-height: 200px; min-height: 200px;">
             <div id="dialNo2" style="max-height: 200px; min-height: 200px;">
               <script type="text/javascript">
-                  secondDial();
+                var username = '{{username}}';
+                secondDial();
               </script>
             </div>
           </div>
@@ -137,6 +139,7 @@
           <div class="card" id="dialNo3Container" style="max-height: 200px; min-height: 200px;">
             <div id="dialNo3" style="max-height: 200px; min-height: 200px;">
               <script type="text/javascript">
+                var username = '{{username}}';
                 thirdDial();
               </script>
             </div>
@@ -153,6 +156,7 @@
   					<div class="card col-12" id="tableChart" style="min-height: 270px; max-height: 400px;">
               <div id="tableChartDiv" onmouseover="showIcons();" onmouseout="hideIcons();">
   		        		<script type="text/javascript">
+                    var username = '{{username}}';
   			        		table();
   		        		</script>
               </div>
@@ -165,6 +169,7 @@
             <div class="card col-12" id="tableChart1" style="min-height: 270px; max-height: 400px;">
               <div id="tableChartDiv1" style="height: 275px;">
                   <script type="text/javascript">
+                    var username = '{{username}}';
                     table1();
                   </script>
               </div>
@@ -175,6 +180,7 @@
 					<div class="card" id="barChart" style="min-height: 270px; max-height: 800px;">
             <div id="barChartDiv">
 		        		<script type="text/javascript">
+                  var username = '{{username}}';
                   barChart();
 		        		</script>
             </div>
@@ -187,6 +193,7 @@
 					<div class="card" id="largeAreaChart" style="max-height: 700px; min-height: 550px; margin-bottom: 15px">
             <div id="largeAreaChartDiv">
 		        	<script type="text/javascript">
+                var username = '{{username}}';
                 areaChart();
 		        	</script>
             </div>
