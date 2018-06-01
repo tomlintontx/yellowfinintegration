@@ -29,6 +29,21 @@ filterValues = function(fvalue) {
 }
 
 
+var clientOrgRefs = {
+	'tom.linton@yellowfin.bi': 'North America',
+	'matt.wilson@yellowfin.bi': 'North America',
+	'conner.madigan@yellowfin.bi': 'North America',
+	'tyler.mcgraw@yellowfin.bi': 'North America',
+	'yulia.astrelina@yellowfin.bi': 'Australia',
+	'tim.mcintosh@yellowfin.bi': 'Australia',
+	'chithresh.suresh@yellowfin.bi': 'Australia',
+	'rob.aldridge@yellowfin.bi': 'Australia',
+	'emma.urli@yellowfin.bi': 'Australia',
+	'sam.vadodaria@yellowfin.bi': 'Europe',
+	'brett.churchill@yellowfin.bi': 'Europe'
+}
+
+
 firstDial = function(filterVals) {
 	var dial1Options = {};
 	dial1Options.reportUUID = '4a19dba6-30f6-4832-a341-2ee730c6956f';
@@ -36,11 +51,14 @@ firstDial = function(filterVals) {
 	dial1Options.showTitle = 'false';
 	dial1Options.username = username;
 	dial1Options.password = 'test';
+	dial1Options.clientOrg = clientOrgRefs[username];
 	dial1Options.showFilters = 'false';
 	if (filterVals != null) {
 		dial1Options.filters = filterVals;
 	}
 	yellowfin.loadReport(dial1Options);
+	console.log(dial1Options);
+	debugger;
 }
 
 secondDial = function(filterVals) {
@@ -50,12 +68,14 @@ secondDial = function(filterVals) {
     dial2Options.showTitle = 'false';
     dial2Options.username = username;
     dial2Options.password = 'test';
+    dial2Options.clientOrg = clientOrgRefs[username];
     dial2Options.showFilters = 'false';
     dial2Options.filters = {};
     if (filterVals != null) {
 		dial2Options.filters = filterVals;
 	}
     yellowfin.loadReport(dial2Options);
+    console.log(dial2Options)
 }
 
 
@@ -66,6 +86,7 @@ thirdDial = function(filterVals) {
     dial3Options.showTitle = 'false';
     dial3Options.username = username;
     dial3Options.password = 'test';
+    dial3Options.clientOrg = clientOrgRefs[username];
     dial3Options.showFilters = 'false';
     dial3Options.filters = {};
     if (filterVals != null) {
@@ -81,6 +102,7 @@ table = function(filterVals) {
 	//tableChartOptions.showTitle = 'false';
 	tableChartOptions.username = username;
 	tableChartOptions.password = 'test';
+	tableChartOptions.clientOrg = clientOrgRefs[username];
 	tableChartOptions.showFilters = 'false';
 	tableChartOptions.filters = {};
 	if (filterVals != null) {
@@ -96,6 +118,7 @@ table1 = function(filterVals) {
 	tableChartOptions1.showTitle = 'false';
 	tableChartOptions1.username = username;
 	tableChartOptions1.password = 'test';
+	tableChartOptions1.clientOrg = clientOrgRefs[username];
 	tableChartOptions1.showFilters = 'false';
 	tableChartOptions1.filters = {};
 	if (filterVals != null) {
@@ -111,6 +134,7 @@ barChart = function(filterVals) {
 	barChartOptions.showTitle = 'false';
 	barChartOptions.username = username;
 	barChartOptions.password = 'test';
+	barChartOptions.clientOrg = clientOrgRefs[username];
 	barChartOptions.showFilters = 'false';
 	barChartOptions.filters = {};
 	if (filterVals != null) {
@@ -126,6 +150,7 @@ areaChart = function(filterVals) {
 	areaChartOptions.showTitle = 'false';
 	areaChartOptions.username = username;
 	areaChartOptions.password = 'test';
+	areaChartOptions.clientOrg = clientOrgRefs[username];
 	areaChartOptions.showFilters = 'false';
 	areaChartOptions.filters = {};
 	if (filterVals != null) {
